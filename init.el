@@ -1,5 +1,8 @@
 (setq gc-cons-threshold 400000000)
 
+(setq load-path (cons (expand-file-name "/home/lloydl/.emacs.d/cmake") load-path))
+(require 'cmake-mode)
+
 ;;; Begin initialization
 ;; Turn off mouse interface early in startup to avoid momentary display
 (when window-system
@@ -29,10 +32,5 @@
   (require 'use-package))
 (require 'diminish)                ;; if you use :diminish
 (require 'bind-key)
-
-(server-start)
-
-;;; Load the config
-(org-babel-load-file (concat user-emacs-directory "config.org"))
 
 (setq gc-cons-threshold 800000)
